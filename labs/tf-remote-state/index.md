@@ -12,7 +12,8 @@ In the `tf-lab3/learn-terraform-variables` directory create a new file `s3.tf` w
 
 ```hcl
 resource "aws_s3_bucket" "remote_state" {
-        bucket = "remote-state-jrs"
+    bucket = "remote-state-jrs"
+    force_destroy = true
     acl = "private"
     
     tags = {
