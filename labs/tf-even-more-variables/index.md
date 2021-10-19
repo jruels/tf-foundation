@@ -1,4 +1,4 @@
-# Terraform Lab 3a
+# Terraform Lab 4
 
 ## Overview 
 Terraform supports several variable types including bool, string and numbers.
