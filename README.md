@@ -4,7 +4,7 @@ This site includes the slides and labs for the Terraform class.
 
 ## Course Content   
 [Slides day 1](https://www.dropbox.com/s/1j61f6p8f4x5ion/Day%201%20-%20Terraform.pdf?dl=0)   
-[Slides day 2](https://www.dropbox.com/s/0ve6r1olgpy1evq/Day%202%20-%20Terraform.pdf?dl=0)   
+[Slides day 2](https://www.dropbox.com/s/l4klurw1iqeuwlf/Day%202%20-%20Terraform.pdf?dl=0)
 
 
 ## Labs
