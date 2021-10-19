@@ -49,6 +49,8 @@ terraform {
 ## Reinitialize Terraform 
 Now that you have created the S3 bucket and configured the `backend.tf` you must run `terraform init` to migrate the state to the new remote backend. 
 
+If prompted to migrate the existing state type 'yes'
+
 If everything is successful you should see a message telling you the backend was migrated. 
 
 
