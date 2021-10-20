@@ -50,7 +50,7 @@ You will be familiar with the first two blocks, `terraform` and `provider`. We'v
 ## Set values for module input variables
 In order to use most modules, you will need to pass input variables to the module configuration. The configuration that calls a module is responsible for setting its input values, which are passed as arguments in the module block. Aside from `source` and `version`, most of the arguments to a module block will set variable values.
 
-On the Terraform registry page for the AWS VPC module, you will see an `Inputs` tab that describes all of the [input variables]()https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/2.21.0?tab=inputs that module supports.
+On the Terraform registry page for the AWS VPC module, you will see an `Inputs` tab that describes all of the [input variables](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/2.21.0?tab=inputs) that module supports.
 
 Some input variables are required, meaning that the module doesn't provide a default value — an explicit value must be provided in order for Terraform to run correctly.
 
