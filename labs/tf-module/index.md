@@ -34,10 +34,10 @@ Enter the directory.
 cd learn-terraform-modules
 ```
 
-Check out the `ec2-instances` tag into a local branch.
+Check out the `ec2-blank` tag into a local branch.
 
 ```sh
-git checkout tags/ec2-instances -b ec2-instances
+git checkout tags/ec2-blank -b ec2-instances
 ```
 
 Review the `main.tf` and you will see it includes four blocks: 
