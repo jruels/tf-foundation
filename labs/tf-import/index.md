@@ -27,7 +27,7 @@ mkdir tf-lab4
 Inside the new directory create a `main.tf` file and add a resource with the following attributes:
 - type: `aws_instance`
 - name: `tf-example-import`
-- ami: `<ami from instances created above`
+- ami: AMI from instances created above
 - instance_type: The type specified when creating the instance.
 - count: `3`
 - tags: `Name: TF-example-import`, `role: terraform`
