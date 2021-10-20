@@ -37,7 +37,7 @@ Remember this resource block is for three instances. You will need to add the `c
 ## Import the configuration 
 Now that you've created the instances and the Terraform configuration, use the `terraform import` command to import the existing instances. 
 
-If you get stuck check the help page `terraform import --help` or the [terraform documentation]()
+If you get stuck check the help page `terraform import --help` or the [terraform documentation](https://www.terraform.io/docs/cli/import/index.html)
 
 
 
