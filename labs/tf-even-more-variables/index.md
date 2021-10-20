@@ -9,7 +9,7 @@ The following steps continue where the previous lab left off. The below changes 
 
 Use a `bool` type variable to control whether your VPC is configured with a VPN gateway. Add a declaration for the `enable_vpn_gateway` to `variables.tf`
 - variable name: `enable_vpn_gateway`
-- description: `Enable a VPN gateway in your VPC."
+- description: `Enable a VPN gateway in your VPC.`
 - type: `bool`
 - default: `false`
 
