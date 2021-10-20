@@ -1,4 +1,4 @@
-# Terraform Lab 7
+# Terraform Lab 8
 
 ## Overview 
 In this lab, you will use modules from the Terraform Registry to provision an AWS environment. The concepts you use in this tutorial will apply to any modules from any source.

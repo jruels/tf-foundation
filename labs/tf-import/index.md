@@ -1,4 +1,4 @@
-# Terraform Lab 5
+# Terraform Lab 6
 
 ## Overview
 In this lab you will create some AWS resources using the console, and then import them into Terraform management. 

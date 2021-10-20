@@ -1,4 +1,4 @@
-# Terraform Lab 6
+# Terraform Lab 7
 
 ## Overview 
 In this lab you will update `main.tf` to include provisioners.
