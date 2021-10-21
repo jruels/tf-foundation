@@ -1,4 +1,4 @@
-# Terraform Lab 8
+# Terraform Lab 10
 
 ## Overview 
 In this lab, you will refactor a monolithic Terraform configuration into a modular design. 
