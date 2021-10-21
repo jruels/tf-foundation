@@ -24,9 +24,13 @@ cd learn-terraform-code-organization
 Your root directory contains four files and an "assets" folder. The root directory files compose the configuration as well as the inputs and outputs of your deployment.
 
 `main.tf` - configures the resources that make up your infrastructure.
+
 `variables.tf` - declares input variables for your `dev` and `prod` environment prefixes, and the AWS region to deploy to.
+
 `terraform.tfvars.example` - defines your region and environment prefixes.
+
 `outputs.tf` - specifies the website endpoints for your dev and prod buckets.
+
 `assets` - houses your webapp HTML file.
 
 Review the `main.tf` file. The file consists of a few different resources:
