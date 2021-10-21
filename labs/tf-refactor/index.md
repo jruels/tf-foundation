@@ -13,7 +13,7 @@ cd $_
 ```
 Clone the GitHub repository.
 ```sh
-git clone https://github.com/hashicorp/learn-terraform-code-organization
+git clone https://github.com/jruels/learn-terraform-code-organization
 ```
 
 Enter the directory.
@@ -119,7 +119,7 @@ You might think you are only updating the development environment because you on
 
 Apply the changes. 
 
-Note that the operation updated all five of your resources by destroying and recreating them. In this scenario, you encountered a hidden resource dependency because both bucket names rely on the same resource.
+Note that the message stating your resources have changed. In this scenario, you encountered a hidden resource dependency because both bucket names rely on the same resource.
 
 Carefully review Terraform execution plans before applying them. If an operator does not carefully review the plan output or if CI/CD pipelines automatically apply changes, you may accidentally apply breaking changes to your resources.
 
@@ -142,23 +142,6 @@ By creating separate directories for each environment, you can shrink the blast 
 
 Directory-separated environments rely on duplicate Terraform code. This may be useful if you want to test changes in a development environment before promoting them to production. However, the directory structure runs the risk of creating drift between the environments over time. If you want to reconfigure a project with a single state file into directory-separated states, you must perform advanced state operations to move the resources.
 
-After reorganizing your environments into directories, your file structure should look like the one below.
-
-```
-.
-├── assets
-│   ├── index.html
-├── prod
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── terraform.tfstate
-│   └── terraform.tfvars
-└── dev
-   ├── main.tf
-   ├── variables.tf
-   ├── terraform.tfstate
-   └── terraform.tfvars
-```
 
 ### Create `prod` and `dev` directories
 1. Create directories named `prod` and `dev`.
@@ -190,19 +173,36 @@ First, open `dev/outputs.tf` in your text editor and remove the reference to the
 
 Remove all references to `prod` in `dev/outputs.tf`, `dev/variables.tf`, and `dev/terraform.tfvars`.
 
-### Create a `prod` directory
+### Update `prod` configuration
 
 1. Rename `prod.tf` to `main.tf` and move it to your `prod` directory.`
 
 2. Move `variables.tf`, `terraform.tfvars`, and `outputs.tf` to the `prod` directory.
-
-Repeat the steps you took in the `dev` directory, and uncomment the `random_pet` and `provider` blocks in `main.tf`
 
 First, open `prod/main.tf` and edit it to reflect new directory structure by adding `/..` to the file path in the content argument of the `aws_s3_bucket_object`, before the `assets` subdirectory.
 
 Next, remove the references to the `dev` environment from `prod/variables.tf`, `prod/outputs.tf`, and `prod/terraform.tfvars`.
 
 Finally, uncomment the `terraform` block, the `provider` block, and the `random_pet` resource in `prod/main.tf`.
+
+After reorganizing your environments into directories, your file structure should look like the one below.
+
+```
+.
+├── assets
+│   ├── index.html
+├── prod
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── terraform.tfstate
+│   └── terraform.tfvars
+└── dev
+├── main.tf
+├── variables.tf
+├── terraform.tfstate
+└── terraform.tfvars
+```
+
 
 ### Deploy environments 
 To deploy the `dev` environment change to the `dev` directory, initialize Terraform, and apply the configuration.
@@ -248,7 +248,7 @@ Update your variable input file to remove references to the individual environme
 
 Remove the environment references in `variables.tf`
 ```hcl
-ariable "region" {
+variable "region" {
   description = "This is the cloud hosting region where your webapp will be deployed."
 }
 
