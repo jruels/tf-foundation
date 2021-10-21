@@ -28,4 +28,3 @@ Lab 8: [Use registry modules](labs/tf-module)
 ### Day 4    
 Lab 9: [Write your own module](labs/tf-write-module)   
 Lab 10: [Refactor monolithic codebase](labs/tf-refactor)   
-Lab 10: [Capstone](labs/capstone)   
