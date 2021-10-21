@@ -66,7 +66,7 @@ Defining multiple environments in the same `main.tf` file may become hard to man
 
 You will organize your current configuration by separating the configurations into two separate files — one root module for each environment. To split the configuration, copy `main.tf` and name it `dev.tf`, then rename `main.tf` to `prod.tf`
 
-Now you have two identical files. Remove any references to the production environment in `dev.tf by deleting the resource blocks with the `prod` ID. Repeat the process for `prod.tf` by removing any resource blocks with the `dev` ID.
+Now you have two identical files. Remove any references to the production environment in `dev.tf` by deleting the resource blocks with the `prod` ID. Repeat the process for `prod.tf` by removing any resource blocks with the `dev` ID.
 
 Your directory structure will look similar to: 
 ```
