@@ -15,7 +15,7 @@ After selecting the `US-East-2` region, use the search bar at the top of the pag
 ## Cleanup
 Remove any files from previous training sessions.
 ```bash
-rm -rf * && rm -rf .local
+rm -rf * && rm -rf $HOME/.local
 ```
 
 ## Congratulations
