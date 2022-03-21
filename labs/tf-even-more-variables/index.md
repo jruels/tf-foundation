@@ -339,3 +339,8 @@ Now test the validation rules by specifying an environment tag that is too long.
 terraform apply -var='resource_tags={project="my-project",environment="development"}'
 ```
 
+# Cleanup 
+Run the following to clean up the resources 
+```bash
+terraform destroy -auto-approve
+```
