@@ -21,8 +21,6 @@ Confirm installation was successful
 terraform version 
 ```
 
-Output should be similar to: `Terraform v1.0.8`
-
 ## Create Terraform configuration
 Create a directory for the lab 1 files:
 ```sh
@@ -42,7 +40,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "default"
   region  = "us-west-2"
 }
 
