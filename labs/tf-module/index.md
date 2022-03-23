@@ -45,7 +45,7 @@ Review the `main.tf` and you will see it includes four blocks:
 You will be familiar with the first two blocks, `terraform` and `provider`. We've used them many times in previous labs.
 
 - `module "vpc"` defines a Virtual Private Cloud (VPC), which will provide networking services for the rest of your infrastructure.
-- 'module` "ec2_instances"` defines two EC2 instances within your VPC.
+- `module "ec2_instances"` defines two EC2 instances within your VPC.
 
 ## Set values for module input variables
 In order to use most modules, you will need to pass input variables to the module configuration. The configuration that calls a module is responsible for setting its input values, which are passed as arguments in the module block. Aside from `source` and `version`, most of the arguments to a module block will set variable values.
